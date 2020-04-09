@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/WhatsApp Image 2020-03-30 at 3.44.24 PM.jpeg" type="image/x-icon">
+    <title>background</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        <button id="generate" onclick="randomise()"></button>
+        <span id="color"></span>
+    </h1>
+  
+  
+  
+      <script type="text/javascript">
+        const set = () => {
+          const randomColor = Math.floor(Math.random()*16777215).toString(16);
+          document.body.style.backgroundColor = "#" + randomColor;
+          document.getElementById("color").innerHTML = "body color = " + "#" + randomColor;
+        } 
+
+        const set2 = () => {
+          const randomColor = Math.floor(Math.random()*16777215).toString(16);
+          document.getElementById("generate").style.backgroundColor = "#" + randomColor;
+          document.getElementById("generate").innerHTML = "#" + randomColor;
+          
+        } 
+  
+        generate.addEventListener("click", set);
+        generate.addEventListener("click", set2);
+        set();
+        set2();
+  
+      </script>
+</body>
+</html>
